@@ -302,7 +302,7 @@ $servers->setValue('server','name','Local LDAP Server');
 
 /* Array of base DNs of your LDAP server. Leave this blank to have phpLDAPadmin
    auto-detect it for you. */
-// $servers->setValue('server','base',array(''));
+ $servers->setValue('server','base',array('dc=ziyotek2,dc=local'));
 
 /* Five options for auth_type:
    1. 'cookie': you will login via a web form, and a client-side cookie will
@@ -329,7 +329,7 @@ $servers->setValue('server','name','Local LDAP Server');
    the directory for users (ie, if your LDAP server does not allow anonymous
    binds. */
 // $servers->setValue('login','bind_id','');
-#  $servers->setValue('login','bind_id','cn=Manager,dc=example,dc=com');
+  $servers->setValue('login','bind_id','cn=admin,dc=ziyotek2,dc=local');
 
 /* Your LDAP password. If you specified an empty bind_id above, this MUST also
    be blank. */
@@ -394,8 +394,8 @@ $servers->setValue('appearance','password_hash','');
    Leave blank or specify 'dn' to use full DN for logging in. Note also that if
    your LDAP server requires you to login to perform searches, you can enter the
    DN to use when searching in 'bind_id' and 'bind_pass' above. */
-// $servers->setValue('login','attr','dn');
-$servers->setValue('login','attr','uid');
+ $servers->setValue('login','attr','dn');
+//$servers->setValue('login','attr','uid');
 
 /* Base DNs to used for logins. If this value is not set, then the LDAP server
    Base DNs are used. */
