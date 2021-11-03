@@ -8,7 +8,7 @@ Alias /ldapadmin /usr/share/phpldapadmin/htdocs
 <Directory /usr/share/phpldapadmin/htdocs>
   <IfModule mod_authz_core.c>
     # Apache 2.4
-    Require local
+    Require local 192.168.34.0/24
   </IfModule>
   <IfModule !mod_authz_core.c>
     # Apache 2.2
