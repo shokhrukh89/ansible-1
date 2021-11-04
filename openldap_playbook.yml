@@ -1,4 +1,4 @@
-# LDAP server config gggg
+# LDAP server config 
 ---
 
 - name: configure ldap server
@@ -8,4 +8,4 @@
   gather_facts: true
   roles:
     - open-ldap
-   # - geerlingguy.php
+   
