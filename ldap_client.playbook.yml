@@ -25,10 +25,10 @@
     - name: Copy Ca.crt
       ansible.builtin.shell:
         chdir: /etc/openldap/cacerts
-        cmd: wget http://192.168.34.113/CA.crt
+        cmd: wget http://192.168.34.29/CA.crt
 
     - name: Redhat | Execute authconfig
-      command: 'authconfig --enableldap --enableldapauth --enablemkhomedir --ldapserver=192.168.34.113 --ldapbasedn="dc=ziyotek2,dc=local" --update'
+      command: 'authconfig --enableldap --enableldapauth --enablemkhomedir --ldapserver=192.168.34.29 --ldapbasedn="dc=ziyotek2,dc=local" --update'
       changed_when: false
 
     # - name: create mountpoint
